@@ -1,3 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Menu - MyRestaurant{% endblock %}
+
+{% block content %}
+<h1>Our Menu</h1>
+<!-- Menu items go here -->
+
+
 <h1>Menu</h1>
 
 
@@ -5,3 +14,5 @@
 <h2><a href="{% url 'menu:menu_detail' menu.slug %}">{{menu}}</a></h2>
 
 {% endfor %}
+
+{% endblock %}
