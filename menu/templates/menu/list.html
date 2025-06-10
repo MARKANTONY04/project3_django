@@ -2,6 +2,6 @@
 
 
 {% for menu in menu_list %}
-<h2><a href="{% url 'menu:menu_detail' menu.slug}">{{menu}}</h2>
+<h2><a href="{% url 'menu:menu_detail' menu.slug %}">{{menu}}</a></h2>
 
 {% endfor %}
