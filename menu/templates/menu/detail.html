@@ -2,19 +2,15 @@
 
 {% block content %}
 
-<h1>Our Menu</h1>
 <!-- Menu items go here -->
-
-
-<h1> Menu Detail </h1>
 
 <h2>{{menu_detail}}</h2>
 
 <h4>{{menu_detail.description}}</h4>
-<h4>{{menu_detail.people}}</h4>
-<h4>{{menu_detail.price}}</h4>
+<h4> Serves: {{menu_detail.people}}</h4>
+<h4> Price: £{{menu_detail.price}}</h4>
 
 <!--created with copilot-->
-<img src="{{menu_detail.image.url}}" alt="{{menu_detail.name}}">
+<img class="menu_img" src="{{menu_detail.image.url}}" alt="{{menu_detail.name}}">
 
 {% endblock %}
