@@ -18,6 +18,10 @@ class Menu(models.Model):
             self.slug = slugify(self.name)
         super(Menu, self).save(*args, **kwargs)
 
+    class meta:
+        verbose_name = 'Menu'
+        verbose_name_plural = 'Menus'
+
 
     def __str__(self):
         return self.name
@@ -25,6 +29,10 @@ class Menu(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=40)
+
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
 
     def __str__(self):
         return self.name
