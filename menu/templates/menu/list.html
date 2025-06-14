@@ -3,11 +3,14 @@
 {% block content %}
         <h1>Menu</h1>
 
-{% for menu in menu_list %}
-<h2><a href="{% url 'menu:menu_detail' menu.slug %}">{{menu}}</a></h2>
-<p>{{menu.description}}</p>
-<p>Price: <strong>£{{menu.price}}</strong></p>
+{% for category in categories %}
+<h2>{{ category.name }}</h2>
+<ul>
+        {% for menu in category.menu_set.all %}
+        <li class="no-bullets"><a href="{% url 'menu:menu_detail' menu.slug %}">{{ menu.name }}</a></li>
+        {% endfor %}
 
+</ul>
 {% endfor %}
 
 {% endblock %}
