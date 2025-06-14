@@ -6,6 +6,7 @@ class Menu(models.Model):
     name = models.CharField(max_length=40)
     slug = models.SlugField(max_length=40, unique=True, blank=True, null=True)
     description = models.TextField(max_length = 300)
+    category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     people = models.IntegerField()
     image = models.ImageField(upload_to='menu/')
@@ -17,6 +18,13 @@ class Menu(models.Model):
             self.slug = slugify(self.name)
         super(Menu, self).save(*args, **kwargs)
 
+
+    def __str__(self):
+        return self.name
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=40)
 
     def __str__(self):
         return self.name

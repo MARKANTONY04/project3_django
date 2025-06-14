@@ -1,13 +1,18 @@
 from django.shortcuts import render
 
 # Create your views here.
-from .models import Menu
+from .models import Menu , Category
 # Views for the menu app
 
 def menu_list(request):
     menu_list = Menu.objects.all()
+    categories = Category.objects.all()
+    context = {
+        'menu_list': menu_list,
+        'categories': categories,
+    }
 
-    return render(request, 'menu/list.html', {'menu_list': menu_list})
+    return render(request, 'menu/list.html',  context)
 
 
 
