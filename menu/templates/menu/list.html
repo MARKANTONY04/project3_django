@@ -7,7 +7,9 @@
 <h2>{{ category.name }}</h2>
 <ul>
         {% for menu in category.menu_set.all %}
-        <li class="no-bullets"><a href="{% url 'menu:menu_detail' menu.slug %}">{{ menu.name }}</a></li>
+        <li class="no-bullets"><h2><a href="{% url 'menu:menu_detail' menu.slug %}">{{ menu.name }}</a></h2></li>
+        <li class="no-bullets">{{ menu.description }}</li>
+        <li class="no-bullets">Price: {{ menu.price }}</li>
         {% endfor %}
 
 </ul>
