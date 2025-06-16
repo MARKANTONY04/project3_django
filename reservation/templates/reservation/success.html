@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+        <h2>Reservation Confirmed!</h2>
+        <p>Thank you for booking with us, <strong>{{ reservation.name }}</strong>.</p>
+        <div class="details">
+            <p><strong>Date:</strong> {{ reservation.date }}</p>
+            <p><strong>Time:</strong> {{ reservation.time }}</p>
+            <p><strong>Guests:</strong> {{ reservation.number_of_guests }}</p>
+            <p>We look forward to seeing you!</p>
+        </div>
+        <a href="/" class="button">Return to Home</a>
+    </div>
+
+{% endblock %}
