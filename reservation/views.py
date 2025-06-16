@@ -26,4 +26,4 @@ def reservation_view(request):
 
         return render(request, 'reservation/success.html', {'reservation': reservation})
 
-    return render(request, 'reservation/reservation_form.html')
+    return render(request, 'reservation/reservation.html')
