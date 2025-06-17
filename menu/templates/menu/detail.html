@@ -10,7 +10,13 @@
 <h4> Serves: {{menu_detail.people}}</h4>
 <h4> Price: £{{menu_detail.price}}</h4>
 
-<!--created with copilot-->
+<!--img tag created with copilot-->
 <img class="menu_img" src="{{menu_detail.image.url}}" alt="{{menu_detail.name}}">
+<br>
+<div class="text-center">
+<a href="{% url 'reservation:reservation_view' %}" type="button" class="btn btn-warning col-6 m-4">Make a Reservation</a>
+<br>
+<a href="{% url 'menu:menu_list' %}" type="button" class="btn btn-warning col-6 m-4">View Menu</a>
+</div>
 
 {% endblock %}
