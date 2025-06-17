@@ -15,6 +15,13 @@
 </ul>
 {% endfor %}
 
+<br>
+<div class="text-center">
+<a href="{% url 'reservation:reservation_view' %}" type="button" class="btn btn-success col-6 m-4">Make a Reservation</a>
+<br>
+<a href="{% url 'home:home_view' %}" type="button" class="btn btn-warning col-6 m-4">Return to Home</a>
+</div>
+
 {% endblock %}
     
 
