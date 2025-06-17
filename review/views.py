@@ -14,8 +14,8 @@ def submit_review(request):
             return redirect('reviews_list')
     else:
         form = ReviewForm()
-    return render(request, 'review/submit_review.html', {'form': form})
+    return render(request, 'reviews/submit_review.html', {'form': form})
 
 def reviews_list(request):
     reviews = Review.objects.all().order_by('-created_at')
-    return render(request, 'review/reviews_list.html', {'reviews': reviews})
+    return render(request, 'reviews/reviews_list.html', {'reviews': reviews})
