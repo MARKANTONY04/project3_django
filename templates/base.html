@@ -2,79 +2,131 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>{% block title %}Barney's Bistro{% endblock %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Bootstrap CSS -->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-        rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Custom CSS -->
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fffdfa;
-            color: #333;
-        }
-        .navbar {
-            background-color: #fff3cd;
-        }
-        .navbar-brand, .nav-link {
-            color: #8b4513 !important;
-            font-weight: 500;
-        }
-        .nav-link:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background-color: #f8f9fa;
-            color: #6c757d;
-            padding: 1rem 0;
-            margin-top: 3rem;
-        }
-        h1, h2, h3 {
-            color: #c0392b;
-        }
-        .menu_img {
-            width: 100% !important
-        }
-        .no-bullets {
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fffdfa;
+        color: #333;
+      }
+      .navbar {
+        background-color: #fff3cd;
+      }
+      .navbar-brand,
+      .nav-link {
+        color: #8b4513 !important;
+        font-weight: 500;
+      }
+      .nav-link:hover {
+        text-decoration: underline;
+      }
+      footer {
+        background-color: #f8f9fa;
+        color: #6c757d;
+        padding: 1rem 0;
+        margin-top: 3rem;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #c0392b;
+      }
+      .menu_img {
+        width: 100% !important;
+      }
+      .no-bullets {
         list-style-type: none;
         padding-left: 0;
         font-size: 130%;
-        }
-        .underline {
-            text-decoration: underline;
-        }
+      }
+      .underline {
+        text-decoration: underline;
+      }
     </style>
 
     {% block extra_head %}{% endblock %}
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" class="underline">Barney's Bistro</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#navbarNav" aria-controls="navbarNav" 
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" class="underline">Barney's Bistro</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
     </nav>
 
     <main class="container mt-4">
-        {% block content %}{% endblock content %}
+      {% block content %}{% endblock content %}
     </main>
 
     <!-- Footer -->
-    
-        
+    <footer class="m-6 text-center footer">
+      <div>
+        <h2 class="underline">Contact Us</h2>
+        <p>Email: BarneysBistro@email.com</p>
+        <div>
+          <p>Follow our socials:</p>
+          <!-- This social links section was used in a previous project of mine (boardwalk games) that I had written up the code with Code Institute-->
+          <div class="social-links my-2">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              aria-label="Visit our Instagram page (opens in a new tab)"
+              rel="noopener"
+              ><i class="fa-brands fa-instagram social-links"> Instagram</i></a
+            >
+            <br />
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              aria-label="Visit our Facebook page (opens in a new tab)"
+              rel="noopener"
+              ><i class="fa-brands fa-square-facebook social-links">
+                Facebook</i
+              ></a
+            >
+            <br />
+            <a
+              href="https://www.x.com"
+              target="_blank"
+              aria-label="Visit our X feed (opens in a new tab)"
+              rel="noopener"
+              ><i class="fa-brands fa-x-twitter social-links"> Twitter/X</i></a
+            >
+          </div>
+          <p>
+            Barney’s Bistro | Where Every Meal Feels Like Home 📍 123 Main
+            Street, Cardiff | 📞 +44 123 456 7890 | ✉️ barneysbistro@email.com
+            ⏰ Opening Hours: Monday - Saturday: 12:00 PM - 10:00 PM 
+            Sunday: Closed - Follow us on social media: Facebook |
+            Instagram | Twitter © 2025 Barney’s Bistro. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     {% block extra_js %}{% endblock %}
-</body>
+  </body>
 </html>
