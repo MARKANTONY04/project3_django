@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Welcome to Our Restaurant</h1>
+    <p>Experience the best dining with us.</p>
+
+    <div class="features">
+        <div class="feature">
+            <h2>Delicious Food</h2>
+            <p>Enjoy a wide variety of dishes made with fresh ingredients.</p>
+        </div>
+        <div class="feature">
+            <h2>Cozy Atmosphere</h2>
+            <p>Relax in our comfortable and inviting setting.</p>
+        </div>
+        <div class="feature">
+            <h2>Friendly Service</h2>
+            <p>Our staff is here to make your dining experience memorable.</p>
+        </div>
+    </div>
+
+    <a href="{% url 'reservation:reservation_view' %}" class="button">Make a Reservation</a>
+
+{% endblock %}
