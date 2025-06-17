@@ -1,26 +1,79 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <div class="container">
-    <h1>Welcome to Our Restaurant</h1>
-    <p>Experience the best dining with us.</p>
+  <h1 class="underline">Welcome to Barney's Bistro</h1>
+  <p>
+    Welcome to our family business, Barney's Bistro. Located in the heart of
+    Cardiff, Wales, this bistro caters for all who wish to dine here with an
+    international menu satiating the tastebuds of all from around the world.
+    It's our mission to make the time you spend with us unforgettable, providing
+    a great dining experience that will last.
+  </p>
 
-    <div class="features">
-        <div class="feature">
-            <h2>Delicious Food</h2>
-            <p>Enjoy a wide variety of dishes made with fresh ingredients.</p>
-        </div>
-        <div class="feature">
-            <h2>Cozy Atmosphere</h2>
-            <p>Relax in our comfortable and inviting setting.</p>
-        </div>
-        <div class="feature">
-            <h2>Friendly Service</h2>
-            <p>Our staff is here to make your dining experience memorable.</p>
-        </div>
+  <div class="features">
+    <div class="feature">
+      <h2 class="underline">Where great food meets great company</h2>
+      <p>
+        At Barney’s Bistro, we believe that every meal should be an experience
+        that delights the senses, warms the heart, and brings people together.
+        Whether you're here for a casual brunch, a romantic dinner, or simply a
+        taste of something extraordinary, our kitchen is always cooking up
+        something special. From locally sourced ingredients to handcrafted
+        dishes, our menu is a celebration of flavor. So sit back, relax, and let
+        us serve you something unforgettable.
+      </p>
     </div>
-
-    <a href="{% url 'reservation:reservation_view' %}" class="button">Make a Reservation</a>
+    <div class="feature">
+      <h2 class="underline">Cozy Atmosphere</h2>
+      <p>
+        Barney’s Bistro is a sanctuary of warmth and comfort, where every detail
+        is designed to make you feel at home. Soft ambient lighting casts a
+        gentle glow over rustic wooden tables, while the inviting aroma of
+        freshly baked bread and simmering sauces fills the air. Plush seating
+        and carefully curated decor create an intimate setting, perfect for
+        lingering conversations. Whether you’re escaping the bustle of the day
+        or celebrating a special occasion, the bistro’s cozy charm envelops you
+        in a relaxing embrace, making every visit a moment to savor.
+      </p>
+    </div>
+    <div class="feature">
+      <h2 class="underline">Friendly Service</h2>
+      <p>
+        At Barney’s Bistro, the warmth doesn’t just come from the kitchen—it
+        comes from the people. Our friendly staff is dedicated to making every
+        guest feel like family, greeting you with genuine smiles and attentive
+        service. Whether you need a recommendation from our carefully crafted
+        menu or simply a refill of your favorite drink, we’re here to ensure
+        your dining experience is seamless and memorable. From the first sip to
+        the final bite, we strive to create moments that linger long after
+        you’ve left the table, turning a simple meal into an unforgettable
+        experience.
+      </p>
+    </div>
+    <div class="feature">
+      <h2 class="underline">Come dine with us</h2>
+      <p>
+        Please see our menu for a full list of our dishes, and if you wish to
+        dine with us, please make a reservation. We are open Monday to
+        Saturday, 10am to 10pm. We look forward to welcoming you to Barney's
+        Bistro, where every meal is a celebration of flavor, comfort, and community
+      </p>
+    </div>
+  </div>
+  <div class="text-center">
+    <a
+      href="{% url 'menu:menu_list' %}"
+      type="button"
+      class="btn btn-warning col-6 m-4"
+      >View Menu</a
+    >
+    <a
+      href="{% url 'reservation:reservation_view' %}"
+      type="button"
+      class="btn btn-warning col-6 m-4"
+      >Make a Reservation</a
+    >
+  </div>
+</div>
 
 {% endblock %}
