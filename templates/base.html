@@ -59,21 +59,26 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand" class="underline">Barney's Bistro</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-    </nav>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home:home_view' %}">Barney's Bistro</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home:home_view' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'menu:menu_list' %}">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'reservation:reservation_view' %}">Reservation</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
     <main class="container mt-4">
       {% block content %}{% endblock content %}
