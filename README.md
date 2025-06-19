@@ -214,6 +214,27 @@ Microsoft copilot also assisted me in fixing some of the bugs that are noted dow
 
 
 
+## 4. Testing
+
+### Bug Fixes
+
+##### Major
+
+
+
+##### Minor
+
+I encountered several minor bugs when coding this project that are listed below. Thanks to some basic troubleshooting and my problem-solving abilities, I was able to solve them without too much trouble.
+
+I had issues with the menu picture sizes, after adding the ‘.menu_img’ class these were resolved thankfully.
+
+I had a problem with the file paths in this project where base.html wasn’t loading, after amending the file paths I managed to resolve this issue.
+
+The favicons were originally not loading and the console would display error’s about this. After examining these errors and basic troubleshooting I was able to amend the favicon ‘href’ file paths to fix the issue by starting the filepath with a /.
+
+When creating the home page, I wrote a typo in the views that caused an error when trying to view the page. I had accidentally typed ‘make_reservation’ instead of ‘reservation_view’. I was able to change it once I realised the error.
+
+The ‘max_legnth’ parameter caused an error in the ‘Phone’ field on the reservation form which caused an error, after removing the parameter I was able to fix the error.
 
 
 
