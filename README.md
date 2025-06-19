@@ -143,3 +143,20 @@ Above is a picture detailing the menu description and the reservation confirmed 
 
 Above is a picture of the reservation and review pages.
 
+
+
+## 2. Features
+
+##### Existing Features
+
+At the conclusion of this project, this website is fully functioning and has all of the necessary features that a fully functioning restaurant booking system website would need, and the features that were set out in the user stories section (exvept the could have review section).
+
+This website is fully responsive, and designed to look good regardless of what screen size is being used. A 'mobile-first' approach was used when designing this website as this is the most popular device size that is currently used when surfing the internet and browsing websites, and screen size was upscaled from there and designed in a way that would make it look good on larger screens with the use of bootstrap’s column function. The site looks good on any device, with content shifting to appropriate locations on the screen as the screen size changes, providing a great user experience.
+
+This website is easy to navigate, as it is constructed in a way that users would expect. There is a navbar at the top with working links to each of the pages users may wish to visit, reinforcing a sense of familiarity and adding an expected page structure that users expect, making it familiar and easy to navigate. The main content in the page is arranged in a way that makes sense and allows easy manoeuvring. Buttons have also been placed on all pages, prompting users to move throughout the website and complete their reservation to dine in this establishment. Pictures and descriptions are provided for menu items, encouraging users to dine in this establishment as the see the food and how it’s prepared.
+
+The title of the restaurant is in the navbar that displays the business' name, sat in a warm, cozy and comfortable brown emphasising the welcoming nature of the page, and it is located at the top of the page regardless of screen size for all users to see. Furthermore, there is a welcome message on the home page to greet the user as they enter the site, explaining the purpose of the site and how it can be used to benefit them and meet any potential user needs.
+
+This restaurant website is user friendly, allowing users read the home page to get a sense of the website’s purpose, naturally taking them to the menu to gain an interest in dining at the restaurant as they see the appetising meals with quality pictures and vivid descriptions. This carries them along to the reservation page where users fill in their personal details and details of their booking requests, which will be confirmed by the booking success page, providing them with their booking details. A button then invites them to return home where they can navigate to the review page of the website, allowing users to provide a review of their experience at the diner (Review section coming soon!). 
+
+There is a footer on the page that contains the site owner's contact information. It contains an email address, allowing anyone to easily contact the site owner for any requests, and it also contains social media links linking users to the site's social media pages to follow for any future updates to the site.
