@@ -286,3 +286,16 @@ This project was deployed early in development as per good software development 
 
 
 
+## 6. Credits
+
+Firstly, I would like to thank my mentor for helping me create this project and bring about the final result. He helped my inception of the project, bringing up useful ideas to consider and implement. 
+
+I would also like to thank the free technologies that I have been able to use for this project, I will once again mention Bootstrap, GitHub, Visual Studio Code Copiliot, Microsoft Copilot and Slack for all of these tools that have helped made coding this project possible. Furthermore, I would also like to thank the code institute tutors who helped resolve my menu template issue, getting all the menu items to display correctly.
+
+I would like to thank the creators for the YouTube tutorial video below I used that helped me with ideas to construct my Django menu model.
+
+https://www.youtube.com/watch?v=EI02wQ51GjA&list=PLBTOBXTz1YFZK0moSgoZq93V_AdvrUGSj
+
+I would also like to mention that I used the README.md from my last project with Code institute as a template for this README.md, and the social links in the footer of the website from my last project. Like all good software developers, it's good to reuse code (and other things) when appropriate to do so to save time, allowing me to direct my attention elsewhere.
+
+Last, and certainly not least I would like to once again thank Code Institute. I have learned backend end software/web development with Django in a matter of weeks thank to them and would not have been able to create this project without them. Furthermore, the walkthrough projects throughout this module culminating in this project have been particularly useful. I would not be here without the teaching I have received from Code institute, and hope this project shows the skills I have learned, and now have been able to implement.
