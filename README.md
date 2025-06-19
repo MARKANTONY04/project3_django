@@ -160,3 +160,14 @@ The title of the restaurant is in the navbar that displays the business' name, s
 This restaurant website is user friendly, allowing users read the home page to get a sense of the website’s purpose, naturally taking them to the menu to gain an interest in dining at the restaurant as they see the appetising meals with quality pictures and vivid descriptions. This carries them along to the reservation page where users fill in their personal details and details of their booking requests, which will be confirmed by the booking success page, providing them with their booking details. A button then invites them to return home where they can navigate to the review page of the website, allowing users to provide a review of their experience at the diner (Review section coming soon!). 
 
 There is a footer on the page that contains the site owner's contact information. It contains an email address, allowing anyone to easily contact the site owner for any requests, and it also contains social media links linking users to the site's social media pages to follow for any future updates to the site.
+
+
+##### Features left to implement
+
+Due to time constraints, there is a certain 'could-have' priority level features in the user stories section that was unable to be implemented into the project. Though unfortunate, this is not a significant issue as the priority and usefulness of these features was low and the website is still fully functioning and finished without them.
+
+
+As the time is now over to work on this project, I would have liked to implement a review page with user authentication but unfortunately I ran out of time focusing on other areas of the project and had to leave it out as a result. It is a shame as the feature is almost complete as you can see in the reservation app (views.py), this will be something to come back to and finish.
+
+Ideally, this would have been a great addition to the site, enhancing its usability even further. However, the lack of these features do not detract anything from the site as the purpose of this site is to display the Barney's Bistro and allow users to make a booking, therefore it’s purpose overall is fully met.
+
