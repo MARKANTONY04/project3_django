@@ -220,6 +220,24 @@ Microsoft copilot also assisted me in fixing some of the bugs that are noted dow
 
 ##### Major
 
+###### Template inheritance issues
+
+Early on in the project, I had an issue loading templates for the front end of the project. I tried changing different aspects of the code to no avail. I then went on YouTube and came across Mahmood Ahmed’s Django tutorial (linked in credits) and used the same block content and endblock tags, ({% block content %} and {% endblock %}). After this, I was able to successfully inherit code from the base template while creating a block of code specific for each page. This was a significant bug that took me a while to fix and important as this project would not have been able to run had this bug not have been fixed.
+
+ 
+
+ 
+
+###### Mobile Responsiveness
+
+I had a problem trying to make the site fully responsive for mobile, as seen below the presentation for the reservation screen was messy, all over the place and not professional. After playing around with different ideas, I decided to add all the content in the block to a div with the ‘text-center’ class to resolve the issue, presenting the reservation form in the centre of the screen for all devices ensuring a professional and tidy look. This was a significant bug, as mobile devices are the most popular device to browse the web. Had not this have been fixed, the unprofessionalism of the messy reservation page would have compromised the business goal of inviting customers to dine in this establishment, as an unprofessional reservation page may have driven away customers.
+
+ 
+
+###### Static files terminal warning and Heroku deployment
+
+Every time I would run the server I would receive a static file warning in the terminal. To fix this, I created a static folder and moved the style.css in there. I then deployed to Heroku once the warning disappeared to see if everything was working as intended, which it wasn’t. I then added the code [STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')] to settings.py which resolved the issue and deployment was successful. This was a significant bug as I would not have been able to successfully deploy the project without it.
+
 
 
 ##### Minor
