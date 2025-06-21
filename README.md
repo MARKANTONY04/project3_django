@@ -41,6 +41,8 @@ Password = MillieandCharlie04*
 
 - Visual Studio Code
 
+- Microsoft Copilot
+
 
 #### 4. Testing
 
@@ -172,23 +174,6 @@ As the time is now over to work on this project, I would have liked to implement
 Ideally, this would have been a great addition to the site, enhancing its usability even further. However, the lack of these features do not detract anything from the site as the purpose of this site is to display the Barney's Bistro and allow users to make a booking, therefore it’s purpose overall is fully met.
 
 
-## 3. Technologies Used
-
-For the creation of this website many technologies were used and utilised to bring about the end result.
-First of all was Git hub, the site you are probably using to view this project and README.md. The code and supporting documents (images etc.) were written and added to Git hub, then committed with a commit message, and then finally pushed. The project section was also utilised to arrange the user stories to monitor progress and provide insight and information on what to do next. Markup language has also been used to write up this README.md file.
-
-Drawn out Wireframes were also used as previously seen, as well as drawing down ideas on paper and jotting down useful points in the early stages of this project. Though the end result is a little different to what was originally conceptualised, these provided a useful instruction to begin constructing the page structure.
-The social links in the footer section were taken from a previous project in which I had written up code with Code Institute. Because this code was fully functioning and like the exact code I was going to write up myself, I thought it good developer practice to save time and copy into my project allowing me to work on other features in the project.
-
-An instrumental tool that was used in this project was Bootstrap Version 5.3 (latest version at the time of this project). The navbar, and buttons, were all used from bootstrap. This allowed a more efficient development time as I was able to copy the code from the website and implement it into the html files and spend more time fixing bugs. Therefore, I would like to personally thank Bootstrap for its free services, allowing me to use its code for my project.
-
-Developer Tools on Google Chrome was also a useful tool that was used in the creation on this website. It was instrumental in getting the website to be fully responsive, as using it I could locate where bugs were causing issues and what the bugs were, and allowed me to test to see if the site fitted correctly onto each screen size with its 'responsive design' feature. Furthermore, using dev-tools allowed me to view the site API data and how to construct my JavaScript code, particularly arrays to fetch the data from the API and display it properly on the screen. Furthermore, chrome dev-tools console helped me greatly in bug fixing as the console displayed the appropriate error that was occurring at any given time, more of this will be discussed later in the bug fixes/testing section. As of writing this I have yet to test the website with lighthouse, however the lighthouse tool in Google Chrome dev kit will be used to test this website in the next section of this README.md. 
-
-Django, Python, JavaScript, HTML5, and CSS3 were all used to code, and therefore create this website. Emmet abbreviation from GitHub to code in these was a very useful feature, as this assisted me in coding, decreasing the time spent to write out full blocks of code, allowing me to focus my attention elsewhere. Emmet abbreviation, along with GitHub copilot helped me some write large sections of code quickly as noted in the files.
-
-The web deployment site Heroku was also used in the creation of this project, where I was able to successfully deploy this project to the web. More info on deployment and cloning below in section 5 of this README.md.
-I would also like to thank Code Institute for teaching me on how to code in Django and Python, and on how to use many of the tools listed above. There work on previous projects has helped me carve out ideas for myself and use them in the creation of this website, and as already noted, 1 small code snippets from previous projects with them have been used in this project for efficiency and display, with another found elsewhere online.
-
 
 
 ## 3. Technologies Used
@@ -224,13 +209,17 @@ Microsoft copilot also assisted me in fixing some of the bugs that are noted dow
 
 Early on in the project, I had an issue loading templates for the front end of the project. I tried changing different aspects of the code to no avail. I then went on YouTube and came across Mahmood Ahmed’s Django tutorial (linked in credits) and used the same block content and endblock tags, ({% block content %} and {% endblock %}). After this, I was able to successfully inherit code from the base template while creating a block of code specific for each page. This was a significant bug that took me a while to fix and important as this project would not have been able to run had this bug not have been fixed.
 
- 
+ ![menu template error](README.md-media/image.png)
+
+ ![menu item template error](README.md-media/image-1.png)
 
  
 
 ###### Mobile Responsiveness
 
 I had a problem trying to make the site fully responsive for mobile, as seen below the presentation for the reservation screen was messy, all over the place and not professional. After playing around with different ideas, I decided to add all the content in the block to a div with the ‘text-center’ class to resolve the issue, presenting the reservation form in the centre of the screen for all devices ensuring a professional and tidy look. This was a significant bug, as mobile devices are the most popular device to browse the web. Had not this have been fixed, the unprofessionalism of the messy reservation page would have compromised the business goal of inviting customers to dine in this establishment, as an unprofessional reservation page may have driven away customers.
+
+![mobile responsiveness error](README.md-media/image-2.png)
 
  
 
@@ -253,6 +242,131 @@ The favicons were originally not loading and the console would display error’s
 When creating the home page, I wrote a typo in the views that caused an error when trying to view the page. I had accidentally typed ‘make_reservation’ instead of ‘reservation_view’. I was able to change it once I realised the error.
 
 The ‘max_legnth’ parameter caused an error in the ‘Phone’ field on the reservation form which caused an error, after removing the parameter I was able to fix the error.
+
+### Code Testing
+
+Testing is an important part of any project, especially in software development and web applications to ensure that the site/project is working as intended with no bugs interfering with the user experience. The HTML, CSS, and Python/Django were all tested and verified for this project, demonstrating that the project is fully working as intended.
+
+##### HTML
+
+All the HTML code passed through the industry recognised W3 Validator (linked below). Thankfully the code was tested and passed through the validator as seen below demonstrating that this project has met the HTML requirements as seen below.
+
+![html validator](README.md-media/imagehtml.png)
+
+https://validator.w3.org/
+
+##### CSS 
+
+I passed the CSS for this project through the industry recognised W3 CSS validator (linked below) and after removing unused CSS, it passed first try without any issues as seen below.
+
+
+![CSS Success](README.md-media/imagecss.png)
+
+ 
+
+https://jigsaw.w3.org/css-validator/ 
+
+##### Python & Django
+
+All Python and Django code was written using the pep8 guidelines.
+
+
+##### Lighthouse
+
+Using Chrome Dev Tools, I was able to use the Lighthouse tool to test the reliability and functionality of the website from a user end point of view. I decided to use incognito mode to run the test as this blocks web extensions that can falsely hinder results. After first running the test, here are the results I received:
+
+
+Overall great results from  Accessibility, and Best Practice with the 2 of them being in the green and achieving a score over 90. However, Performance was a little lower in the 60's. 
+
+Firstly, some of the issues regarding the performance were negligible, unused bootstrap css was one of the main culprits however I was unable to do anything about this so I have decided to leave it be. This is no issue as the impact is minimal. However, I believe this result could be false as I am currently using an old pc with problems and the main culprit dragging down the score is 'minimise thread work' in the category 'other'. I believe this is no issue an a one off fluke and will leave it as a result as the other problems such as bootstrap css can't be changed. Seeing that the impact of these were negligible I decided to leave them as the impact once again was irrelevant.
+
+Accessibility results are good at a 94 score. Some suggestions came up about changing the color scheme as seen below, however, as the score is high enough these are only suggestions to consider. Therefore, I am happy with this score and will leave it.
+
+Best practice scores 100, nothing else needs to be said.
+
+
+
+
+Therefore, after testing this project using lighthouse I can demonstrate that this projects meets the accessibility, best practice,  categories with scores over 90 and some even near 100 a perfect score, and i believe performance should score higher as my PC is old and unreliable.
+
+![Lighthouse scores](README.md-media/imagelighthousescore.png)
+
+![performance lighthouse result](README.md-media/imagelhp.png)
+
+
+##### Story Testing
+
+This section will look back onto the user stories to show how the end result has met the 'must-have' and 'should-have' user stories criteria.
+
+This user story has been fully met as the site is responsive and traditionally structured, allowing a familiar layout that any user can appreciate. With a navbar at the top of the page guiding users through the site and helping them navigate to a page they want. The content of the page is well structured regardless of the screen size of user devices, and there is a footer at the bottom of the page to prompt contact if required. 
+
+ 
+
+
+This user story has been fully met as there a page on this site dedicated to the menu, that contains all the menu items that the restaurant offers.
+
+ 
+The Pictures and Descriptions user story has been fully met as each menu item has a picture of the meal that is served along with a description of the meal on the menu page.
+
+ 
+
+The people booking user story has been met as on the reservation page there is an option for users to book 1 or more people to dine in this restaurant.
+
+ 
+
+The contact details user story has been fully met as there is a footer on the base template that pulls through to each page, that contains contact information for users to contact if needed.
+
+ 
+
+The dietary user story has been fully met as there is a meal in each category that that is both gluten free and vegan, meaning this bistro has meals suitable for all.
+
+ 
+
+The booking confirmation user story has been fully met as once users make a booking they receive a confirmation message that there booking has been registered after making a booking/reservation.
+
+ 
+
+The home page user story has been fully met as there is a home page with information about the bistro, which also directs the user to the other areas of the site. The home page is also the first pgae the users come across meaning they will first understand the purpose of the site and then be able to use the rest of the site effectively after understanding it’s purpose.
+
+ 
+
+
+
+There is an optional "could-have" user story seen below that were not able to be implemented as there was not enough time, however I may implement them in the future. I would have loved to add this review feature as I think it could add to the authenticity of this site, and provide another an interactive feature for users. However, the lack of this feature does not diminish this site in anyway. And the purpose of this site and its primary user stories has been fully met.
+
+ 
+
+Here is a link to the user stories section if you wish to visit it for yourself:
+
+[User stories link] https://github.com/users/MARKANTONY04/projects/2/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D
+
+
+
+
+
+##### Functionality Testing 
+
+This section will document the testing the website will undergo to ensure everything about the website is working as it should be. A table is below noting the action to test, the expected behaviour, and whether or not it passes or fails.
+
+| Action        | Expected behaviour  | Pass/Fail|
+| ------------- |:-------------:| -----:|
+| Click all navbar items on every page to test if the links work | Navbar link takes you to expected page | Pass |
+| Click on the navigation buttons on each page of the site that takes you to the expected page/ location| Button links takes you to expected page | Pass|
+| Clicking on each menu item on the menu page  | Takes you to the specified menu item| Pass|
+| Filling in the reservation form | Saves the data on the database | Pass|
+| Each field on the reservation form must be filled| Warning is given to fields no filled | Pass|
+| Booking form filled in properly | Booking confirmation screen is shown| Pass|
+| No reviews are posted | No reviews screen shows| Pass|
+| Review is posted | Review shows on the page| Pass|
+| Deploy in Heroku | Successful deployment shows everything working as it should like local environment| Pass|
+
+
+No reviews page seen here:
+
+![no reviews](README.md-media/imagenoreviews.png)
+
+The website is fully responsive to the user's device screen size and has been tested extensively.
+
 
 
 
@@ -280,9 +394,13 @@ To deploy this project, please follow the steps below:
 
 (Key – Value)
 Debug – False
+
 IP – 0.0.0.0
+
 MONGO_URI – mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&~=majority
+
 PORT – 5000
+
 SECRET_KEY - <Your secret key>
 
 To get your MONGO_URI, read the MongoDB Atlas documentation on the official website. (Here: https://www.mongodb.com/docs/)
