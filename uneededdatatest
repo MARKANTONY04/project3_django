@@ -1,0 +1,1228 @@
+[
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2025-06-07T11:22:07.619Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "Spaghetti and Meatballs",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2025-06-07T12:07:03.113Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "Spaghetti and Meatballs",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2025-06-13T19:23:08.067Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "2",
+            "object_repr": "Grilled Ribeye Steak",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2025-06-14T10:51:38.856Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "1",
+            "object_repr": "Starter",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2025-06-14T10:51:50.764Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "2",
+            "object_repr": "Main Course",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2025-06-14T10:52:03.293Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "3",
+            "object_repr": "Desert",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2025-06-14T10:53:13.878Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "3",
+            "object_repr": "Dessert",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2025-06-14T10:59:32.318Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "Spaghetti and Meatballs",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2025-06-14T10:59:47.290Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "2",
+            "object_repr": "Grilled Ribeye Steak",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2025-06-15T11:32:44.442Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "3",
+            "object_repr": "French Onion Soup",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 11,
+        "fields": {
+            "action_time": "2025-06-15T11:40:50.512Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "4",
+            "object_repr": "Prawn Cocktail",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 12,
+        "fields": {
+            "action_time": "2025-06-15T11:50:47.054Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "5",
+            "object_repr": "Mediterranean Feast",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 13,
+        "fields": {
+            "action_time": "2025-06-15T11:54:55.343Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "6",
+            "object_repr": "Harissa Cauliflower and Coriander Hummus",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 14,
+        "fields": {
+            "action_time": "2025-06-15T11:59:47.678Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "7",
+            "object_repr": "Sushi Platter",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 15,
+        "fields": {
+            "action_time": "2025-06-15T12:09:25.966Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "8",
+            "object_repr": "Butternut Squash with Quinoa",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 16,
+        "fields": {
+            "action_time": "2025-06-15T12:13:54.891Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "9",
+            "object_repr": "Korean BBQ",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 17,
+        "fields": {
+            "action_time": "2025-06-15T12:18:08.540Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "10",
+            "object_repr": "Mexican Fajita Platter",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 18,
+        "fields": {
+            "action_time": "2025-06-15T12:28:41.612Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "11",
+            "object_repr": "Sticky Toffee Pudding",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 19,
+        "fields": {
+            "action_time": "2025-06-15T12:46:19.743Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "12",
+            "object_repr": "Chocolate Brownie",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 20,
+        "fields": {
+            "action_time": "2025-06-15T12:51:42.646Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "13",
+            "object_repr": "Cr\ufffdme Br\ufffdl\ufffde",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 21,
+        "fields": {
+            "action_time": "2025-06-15T12:54:25.162Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "14",
+            "object_repr": "Fruit Salad",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 22,
+        "fields": {
+            "action_time": "2025-06-15T13:01:30.027Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "15",
+            "object_repr": "Classic Tiramisu",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 23,
+        "fields": {
+            "action_time": "2025-06-15T13:03:07.824Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "14",
+            "object_repr": "Fruit Salad",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 24,
+        "fields": {
+            "action_time": "2025-06-16T18:17:51.296Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": "Booking confirmed. Reservation for Test on 2025-06-16 at 18:12:55. We look forward to seeing you.",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 25,
+        "fields": {
+            "action_time": "2025-06-18T18:30:57.333Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "1",
+            "object_repr": "Review by MARKANTONY07 - 5 stars",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 1,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 1,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 1,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 1,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 2,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 2,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 2,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 2,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 3,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 3,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 3,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 3,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 4,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 4,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 4,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 4,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 5,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 5,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 5,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 5,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 6,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 6,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 6,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 6,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add menu",
+            "content_type": 7,
+            "codename": "add_menu"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change menu",
+            "content_type": 7,
+            "codename": "change_menu"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete menu",
+            "content_type": 7,
+            "codename": "delete_menu"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view menu",
+            "content_type": 7,
+            "codename": "view_menu"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add category",
+            "content_type": 8,
+            "codename": "add_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change category",
+            "content_type": 8,
+            "codename": "change_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete category",
+            "content_type": 8,
+            "codename": "delete_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view category",
+            "content_type": 8,
+            "codename": "view_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add reservation",
+            "content_type": 9,
+            "codename": "add_reservation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change reservation",
+            "content_type": 9,
+            "codename": "change_reservation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete reservation",
+            "content_type": 9,
+            "codename": "delete_reservation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view reservation",
+            "content_type": 9,
+            "codename": "view_reservation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 37,
+        "fields": {
+            "name": "Can add review",
+            "content_type": 10,
+            "codename": "add_review"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 38,
+        "fields": {
+            "name": "Can change review",
+            "content_type": 10,
+            "codename": "change_review"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 39,
+        "fields": {
+            "name": "Can delete review",
+            "content_type": 10,
+            "codename": "delete_review"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can view review",
+            "content_type": 10,
+            "codename": "view_review"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$blwMQum3t5ntQhP6j2a1Ia$1Qx+NIDtUvC2IWZM90SUdq7fH5jyB+X8GWINFMrxpgM=",
+            "last_login": "2025-10-13T09:54:27.961Z",
+            "is_superuser": true,
+            "username": "MARKANTONY07",
+            "first_name": "",
+            "last_name": "",
+            "email": "x9qjikqj@students.codeinstitute.net",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2025-06-06T16:07:31.621Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "auth",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "menu",
+            "model": "menu"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "menu",
+            "model": "category"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "reservation",
+            "model": "reservation"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 10,
+        "fields": {
+            "app_label": "review",
+            "model": "review"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "1jye5a2c3hip0otmkss8b1zj4e6pykw3",
+        "fields": {
+            "session_data": ".eJxVjDkOwjAUBe_iGlkYr6Gk5wzR919wANlSnFSIu0OkFNC-mXkvNcK6lHHtPI8TqbMy6vC7ZcAH1w3QHeqtaWx1maesN0XvtOtrI35edvfvoEAv39oR-SQZAxkLniGgoER01hMenYhgCtENLC6hR5RTtslnjIYHEc-i3h8mPDnR:1uNZdC:FEeCLDUThHAHp1gWyqrgBSgUkOEEfdrf70h_QBxBf6w",
+            "expire_date": "2025-06-20T16:09:22.799Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "4hsbuvp9zca138zflwlcmre53qobujw3",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAQRf-FtSEwM0Dj0r3fQIaXVA0kpV0Z_12bdKHbe865L-F5W6vfRl78nMRZaHH63QLHR247SHduty5jb-syB7kr8qBDXnvKz8vh_h1UHvVbI2FJ2ii2gHZiRFI6JM0ZC01gwToDYJQLWDI5LBEoBxVLMA5dsiTeH7dlNv4:1uRxLj:w0ZoA8ghHtO5YZFEv7CIjtaeJ4MK48UYUVX4ujYDpZM",
+            "expire_date": "2025-07-02T18:17:27.065Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "e92kd6dv9br7kkf15d10nv9a4woz698x",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAQRf-FtSEwM0Dj0r3fQIaXVA0kpV0Z_12bdKHbe865L-F5W6vfRl78nMRZaHH63QLHR247SHduty5jb-syB7kr8qBDXnvKz8vh_h1UHvVbI2FJ2ii2gHZiRFI6JM0ZC01gwToDYJQLWDI5LBEoBxVLMA5dsiTeH7dlNv4:1v8FG7:n_l0HFIxYsM9nyG_9crFIxJCDsG2C-OFQRmZmtdNbOM",
+            "expire_date": "2025-10-27T09:54:27.996Z"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 1,
+        "fields": {
+            "name": "Spaghetti and Meatballs",
+            "slug": "spaghetti-and-meatballs",
+            "description": "A timeless Italian favorite featuring tender, hand-rolled beef and pork meatballs simmered in a rich, slow-cooked tomato sauce. Served over a bed of perfectly al dente spaghetti and finished with a sprinkle of Parmesan cheese and fresh basil. Comfort food at its finest!",
+            "category": 2,
+            "price": "15.00",
+            "people": 1,
+            "image": "menu/spaghetti_and_meatballs.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 2,
+        "fields": {
+            "name": "Grilled Ribeye Steak",
+            "slug": "grilled-ribeye-steak",
+            "description": "A juicy, 10oz ribeye steak, perfectly aged for tenderness and flame-grilled to your preferred doneness. Served with hand-cut rosemary chips, seasonal vegetables, and a choice of peppercorn, B\ufffdarnaise, or chimichurri sauce. Finished with a garlic and herb butter for a melt-in-your-mouth finish.",
+            "category": 2,
+            "price": "20.00",
+            "people": 1,
+            "image": "menu/Ribeye-with-Black-Peppercorn-Sauce-1.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 3,
+        "fields": {
+            "name": "French Onion Soup",
+            "slug": "french-onion-soup",
+            "description": "A rich, slow-simmered broth made from caramelized onions and a touch of sherry, topped with a golden, bubbling layer of melted Gruy\ufffdre cheese. Served with a crispy, oven-toasted baguette for the perfect balance of deep flavor and comforting warmth.",
+            "category": 1,
+            "price": "5.00",
+            "people": 1,
+            "image": "menu/easy-french-onion-soup.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 4,
+        "fields": {
+            "name": "Prawn Cocktail",
+            "slug": "prawn-cocktail",
+            "description": "Succulent prawns, delicately poached and served on a bed of crisp, fresh lettuce. Finished with a creamy, tangy Marie Rose sauce and a sprinkle of paprika for a touch of warmth. Accompanied by lemon wedges and buttered brown bread for the perfect balance of flavor and texture.",
+            "category": 1,
+            "price": "5.00",
+            "people": 1,
+            "image": "menu/Classic-Prawn-Cocktail.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 5,
+        "fields": {
+            "name": "Mediterranean Feast",
+            "slug": "mediterranean-feast",
+            "description": "A vibrant selection of small plates inspired by the flavors of the Mediterranean. Enjoy creamy hummus, smoky baba ganoush, and refreshing tzatziki, served alongside warm pita bread. Complemented by marinated olives, stuffed grape leaves, and crispy falafel, this mezze platter is perfect for sharing.",
+            "category": 1,
+            "price": "20.00",
+            "people": 4,
+            "image": "menu/med_mezze.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 6,
+        "fields": {
+            "name": "Harissa Cauliflower and Coriander Hummus",
+            "slug": "harissa-cauliflower-and-coriander-hummus",
+            "description": "Tender cauliflower wedges roasted with fragrant rose harissa, served alongside creamy hummus infused with fresh coriander. Finished with a sprinkle of homemade dukkah for a delightful crunch. Vegan and Gluten free dish.",
+            "category": 1,
+            "price": "5.00",
+            "people": 1,
+            "image": "menu/harissa_cauliflower_and_hummus.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 7,
+        "fields": {
+            "name": "Sushi Platter",
+            "slug": "sushi-platter",
+            "description": "A beautifully arranged selection of fresh sushi, featuring delicate nigiri, vibrant maki rolls, and expertly sliced sashimi. Enjoy a variety of flavors, from buttery salmon and rich tuna to crisp cucumber and creamy avocado. Served with pickled ginger, wasabi, and soy sauce.",
+            "category": 1,
+            "price": "10.00",
+            "people": 2,
+            "image": "menu/sushi_platter.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 8,
+        "fields": {
+            "name": "Butternut Squash with Quinoa",
+            "slug": "butternut-squash-with-quinoa",
+            "description": "Roasted butternut squash halves filled with a fragrant mix of fluffy quinoa, toasted almonds, and fresh herbs. Topped with juicy pomegranate seeds and a drizzle of tahini dressing, this dish offers a perfect balance of sweetness, crunch, and creaminess. Vegan & Gluten free dish.",
+            "category": 2,
+            "price": "10.00",
+            "people": 1,
+            "image": "menu/Stuffed_Butternut_Squash_with_Quinoa__Pomegranate.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 9,
+        "fields": {
+            "name": "Korean BBQ",
+            "slug": "korean-bbq",
+            "description": "A sizzling selection of marinated meats, including tender bulgogi beef, smoky galbi short ribs, and juicy samgyeopsal pork belly. Grilled to perfection at your table, accompanied by an array of traditional banchan\ufffdkimchi, pickled radish, and spicy cucumber salad.",
+            "category": 2,
+            "price": "50.00",
+            "people": 4,
+            "image": "menu/korean_bbq.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 10,
+        "fields": {
+            "name": "Mexican Fajita Platter",
+            "slug": "mexican-fajita-platter",
+            "description": "A sizzling selection of marinated meats, including tender chicken, juicy steak, and succulent shrimp, grilled to perfection with vibrant bell peppers and onions. Served with warm flour tortillas, fresh guacamole, tangy salsa, sour cream, and a sprinkle of zesty lime.",
+            "category": 2,
+            "price": "25.00",
+            "people": 2,
+            "image": "menu/Mexican_Fajita_Platter.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 11,
+        "fields": {
+            "name": "Sticky Toffee Pudding",
+            "slug": "sticky-toffee-pudding",
+            "description": "A rich, moist sponge cake infused with finely chopped dates, drenched in a luscious, buttery toffee sauce. Served warm with a scoop of velvety vanilla ice cream or a drizzle of smooth custard, this classic British dessert delivers deep caramel flavors and irresistible indulgence.",
+            "category": 3,
+            "price": "7.00",
+            "people": 1,
+            "image": "menu/sticky_toffee_pudding.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 12,
+        "fields": {
+            "name": "Chocolate Brownie",
+            "slug": "chocolate-brownie",
+            "description": "A rich, fudgy brownie with a perfectly crisp top and a decadent, melt-in-your-mouth center. Made with premium dark chocolate and a hint of vanilla, this indulgent treat is served warm with a scoop of velvety vanilla ice cream or a drizzle of luscious chocolate sauce.",
+            "category": 3,
+            "price": "7.00",
+            "people": 1,
+            "image": "menu/chocolate_brownie.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 13,
+        "fields": {
+            "name": "Cr\ufffdme Br\ufffdl\ufffde",
+            "slug": "creme-brulee",
+            "description": "A silky smooth vanilla custard, delicately infused with rich cream and Madagascar vanilla beans. Topped with a perfectly caramelized sugar crust that cracks beautifully with each spoonful, revealing the luscious, creamy base beneath. Served chilled for the perfect contrast of textures and flavors.",
+            "category": 3,
+            "price": "7.00",
+            "people": 1,
+            "image": "menu/creme_brulee.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 14,
+        "fields": {
+            "name": "Fruit Salad",
+            "slug": "fruit-salad",
+            "description": "A vibrant medley of fresh, seasonal fruits, bursting with natural sweetness and refreshing juiciness. Featuring sun-ripened berries, crisp apples, succulent melons, and zesty citrus, all delicately tossed and finished with a squeeze of lime for an extra touch of brightness. Vegan and Gluten free.",
+            "category": 3,
+            "price": "7.00",
+            "people": 1,
+            "image": "menu/fruit_salad.jpg"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": 15,
+        "fields": {
+            "name": "Classic Tiramisu",
+            "slug": "classic-tiramisu",
+            "description": "A luxurious Italian dessert featuring layers of delicate ladyfingers soaked in rich espresso and a touch of Marsala wine. Nestled between velvety mascarpone cream and lightly sweetened whipped eggs, this indulgent treat is finished with a dusting of fine cocoa powder.",
+            "category": 3,
+            "price": "7.00",
+            "people": 1,
+            "image": "menu/tiramisu.jpg"
+        }
+    },
+    {
+        "model": "menu.category",
+        "pk": 1,
+        "fields": {
+            "name": "Starter"
+        }
+    },
+    {
+        "model": "menu.category",
+        "pk": 2,
+        "fields": {
+            "name": "Main Course"
+        }
+    },
+    {
+        "model": "menu.category",
+        "pk": 3,
+        "fields": {
+            "name": "Dessert"
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 1,
+        "fields": {
+            "name": "Test",
+            "phone_number": 123,
+            "email": "x9qjikqj@students.codeinstitute.net",
+            "date": "2025-06-16",
+            "time": "18:12:55",
+            "number_of_guests": 4
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 2,
+        "fields": {
+            "name": "bob",
+            "phone_number": 987,
+            "email": "x9qjikqj@students.codeinstitute.net",
+            "date": "2025-06-25",
+            "time": "21:40:00",
+            "number_of_guests": 4
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 3,
+        "fields": {
+            "name": "aj",
+            "phone_number": 234,
+            "email": "x9qjikqj@students.codeinstitute.net",
+            "date": "2025-06-23",
+            "time": "20:55:00",
+            "number_of_guests": 3
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 4,
+        "fields": {
+            "name": "nb",
+            "phone_number": 678,
+            "email": "alexander.martin@wales.nhs.uk",
+            "date": "2025-06-16",
+            "time": "21:15:00",
+            "number_of_guests": 3
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 5,
+        "fields": {
+            "name": "bob",
+            "phone_number": 789,
+            "email": "x9qjikqj@students.codeinstitute.net",
+            "date": "2025-06-23",
+            "time": "17:25:00",
+            "number_of_guests": 4
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 6,
+        "fields": {
+            "name": "ki",
+            "phone_number": 654,
+            "email": "x9qjikqj@students.codeinstitute.net",
+            "date": "2025-06-25",
+            "time": "19:25:00",
+            "number_of_guests": 2
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 7,
+        "fields": {
+            "name": "ki",
+            "phone_number": 654,
+            "email": "x9qjikqj@students.codeinstitute.net",
+            "date": "2025-06-25",
+            "time": "19:25:00",
+            "number_of_guests": 2
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 8,
+        "fields": {
+            "name": "jo",
+            "phone_number": 908,
+            "email": "x9qjikqj@students.codeinstitute.net",
+            "date": "2025-06-27",
+            "time": "20:30:00",
+            "number_of_guests": 3
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 9,
+        "fields": {
+            "name": "hy",
+            "phone_number": 456,
+            "email": "x9qjikqj@students.codeinstitute.net",
+            "date": "2025-06-24",
+            "time": "18:30:00",
+            "number_of_guests": 1
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 10,
+        "fields": {
+            "name": "go",
+            "phone_number": 321,
+            "email": "x9qjikqj@students.codeinstitute.net",
+            "date": "2025-06-28",
+            "time": "20:30:00",
+            "number_of_guests": 3
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 11,
+        "fields": {
+            "name": "abc",
+            "phone_number": 123,
+            "email": "alexander.martin@wales.nhs.uk",
+            "date": "2025-06-18",
+            "time": "17:30:00",
+            "number_of_guests": 2
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 12,
+        "fields": {
+            "name": "jojo",
+            "phone_number": 987,
+            "email": "x9qjikqj@students.codeinstitute.net",
+            "date": "2025-06-26",
+            "time": "21:10:00",
+            "number_of_guests": 2
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 13,
+        "fields": {
+            "name": "aaa",
+            "phone_number": 1234567890,
+            "email": "foxiheg744@cnguopin.com",
+            "date": "2025-10-20",
+            "time": "14:00:00",
+            "number_of_guests": 3
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 14,
+        "fields": {
+            "name": "aaa",
+            "phone_number": 1234567890,
+            "email": "foxiheg744@cnguopin.com",
+            "date": "2025-10-01",
+            "time": "14:00:00",
+            "number_of_guests": 1
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 15,
+        "fields": {
+            "name": "aaa",
+            "phone_number": 1234567890,
+            "email": "foxiheg744@cnguopin.com",
+            "date": "2025-10-15",
+            "time": "11:23:00",
+            "number_of_guests": 1
+        }
+    },
+    {
+        "model": "reservation.reservation",
+        "pk": 16,
+        "fields": {
+            "name": "Sample",
+            "phone_number": 12345677,
+            "email": "vonaj99995@fanlvr.com",
+            "date": "2025-10-22",
+            "time": "11:00:00",
+            "number_of_guests": 2
+        }
+    },
+    {
+        "model": "review.review",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "title": "A hidden gem",
+            "rating": 5,
+            "comment": "Whether you're stopping by for a cozy date night, a celebratory dinner, or just to treat yourself on a Tuesday, Barney\ufffds Bistro delivers a dining experience that\ufffds unpretentious yet unforgettable.",
+            "created_at": "2025-06-18T18:30:57.150Z"
+        }
+    }
+]
