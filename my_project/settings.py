@@ -17,10 +17,10 @@ if os.path.isfile('env.py'):
     import env
 
 
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
-import cloudinary_storage
+# import cloudinary
+# import cloudinary.uploader
+# import cloudinary.api
+# import cloudinary_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -156,18 +156,26 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
 
-cloudinary.config( 
-  cloud_name = os.environ.get('CLOUDINARY_CLOUD_NAME'), 
-  api_key = os.environ.get('CLOUDINARY_API_KEY'), 
-  api_secret = os.environ.get('CLOUDINARY_API_SECRET')
-)
+# cloudinary.config( 
+#   cloud_name = os.environ.get('CLOUDINARY_CLOUD_NAME'), 
+#   api_key = os.environ.get('CLOUDINARY_API_KEY'), 
+#   api_secret = os.environ.get('CLOUDINARY_API_SECRET')
+# )
 
 # DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+# email setup for users
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'noreply@barneysbistro.test'
+
 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
