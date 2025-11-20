@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Edit Reservation</h2>
+
+<!-- Chat GPT helped create the below -->
+<form method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <div class="mb-3">{{ form.name.label_tag }}{{ form.name }}{{ form.name.errors }}</div>
+    <div class="mb-3">{{ form.phone_number.label_tag }}{{ form.phone_number }}{{ form.phone_number.errors }}</div>
+    <div class="mb-3">{{ form.email.label_tag }}{{ form.email }}{{ form.email.errors }}</div>
+    <div class="mb-3">{{ form.date.label_tag }}{{ form.date }}{{ form.date.errors }}</div>
+    <div class="mb-3">
+        <label for="id_time">Reservation Time</label>
+        <select name="time" id="id_time" class="form-control">
+            {% for t in time_slots %}
+                <option value="{{ t }}" {% if t == reservation.time %}selected{% endif %}>{{ t|time:"H:i" }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">{{ form.number_of_guests.label_tag }}{{ form.number_of_guests }}{{ form.number_of_guests.errors }}</div>
+
+    <button type="submit" class="btn btn-success">Save Changes</button>
+    <a href="{% url 'reservation:reservation_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}
