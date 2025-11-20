@@ -3,42 +3,83 @@
 {% block title %}Reservation Page{% endblock %}
 
 {% block content %}
-
 <h2 class="text-center">Make a Reservation</h2>
-    <form method="POST">
-        {% csrf_token %}
-        <div class="text-center">
-        <label for="name" class="m-4">Name:</label>
-        <input type="text" name="name" required>
-        <br>
 
-        <label for="phone_number" class="m-4">Phone:</label>
-        <input type="tel" name="phone_number" required>
-        <br>
+<form method="POST" id="reservationForm">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <div class="mb-3">
+        {{ form.name.label_tag }}<br>
+        {{ form.name }}
+        {{ form.name.errors }}
+    </div>
 
-        <label for="email" class="m-4">Email:</label>
-        <input type="email" name="email" required>
-        <br>
+    <div class="mb-3">
+        {{ form.phone_number.label_tag }}<br>
+        {{ form.phone_number }}
+        {{ form.phone_number.errors }}
+    </div>
 
-        <label for="date" class="m-4">Date:</label>
-        <input type="date" name="date" required>
-        <br>
+    <div class="mb-3">
+        {{ form.email.label_tag }}<br>
+        {{ form.email }}
+        {{ form.email.errors }}
+    </div>
 
-        <label for="time" class="m-4">Time:</label>
-        <input type="time" name="time" required>
-        <br>
+    <div class="mb-3">
+        {{ form.date.label_tag }}<br>
+        {{ form.date }}
+        {{ form.date.errors }}
+    </div>
 
-        <label for="number_of_guests" class="m-4">Guests:</label>
-        <input type="number" name="number_of_guests" min="1" required>
-        <br>
+    <div class="mb-3">
+        <label for="id_time">Reservation Time</label><br>
+        <select name="time" id="id_time" class="form-control">
+            {% for t in time_slots %}
+                <option value="{{ t }}">{{ t|time:"H:i" }}</option>
+            {% endfor %}
+        </select>
+    </div>
 
-        <button type="submit" class="btn btn-info col-6 m-4">Submit Reservation</button>
-        <a
-            href="{% url 'menu:menu_list' %}"
-            type="button"
-            class="btn btn-warning col-6 m-4"
-            >View Menu</a>
-            </div>
-    </form>
+    <div class="mb-3">
+        {{ form.number_of_guests.label_tag }}<br>
+        {{ form.number_of_guests }}
+        {{ form.number_of_guests.errors }}
+    </div>
 
+    <p id="availability-msg" class="mt-2"></p>
+
+    <button type="submit" class="btn btn-info col-6 m-4">Submit Reservation</button>
+    <a href="{% url 'menu:menu_list' %}" class="btn btn-warning col-6 m-4">View Menu</a>
+</form>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    function checkAvailability() {
+        const dateInput = document.querySelector("input[name='date']").value;
+        const timeSelect = document.querySelector("select[name='time']").value;
+        const guests = document.querySelector("input[name='number_of_guests']").value;
+
+        if (!dateInput || !timeSelect || !guests) {
+            document.getElementById("availability-msg").innerHTML = "";
+            return;
+        }
+
+        fetch("{% url 'reservation:check_availability' %}?date=" + encodeURIComponent(dateInput) + "&time=" + encodeURIComponent(timeSelect) + "&guests=" + encodeURIComponent(guests))
+            .then(r => r.json())
+            .then(data => {
+                const m = document.getElementById("availability-msg");
+                if (data.available) {
+                    m.innerHTML = "<span style='color:green;'>Available ✔</span>";
+                } else {
+                    m.innerHTML = "<span style='color:red;'>Fully booked ✖</span>";
+                }
+            });
+    }
+
+    document.querySelector("input[name='date']").addEventListener("change", checkAvailability);
+    document.querySelector("select[name='time']").addEventListener("change", checkAvailability);
+    document.querySelector("input[name='number_of_guests']").addEventListener("input", checkAvailability);
+});
+</script>
 {% endblock %}
