@@ -17,3 +17,10 @@ class ReservationForm(forms.ModelForm):
             'time': 'Reservation Time',
             'number_of_guests': 'Number of Guests',
         }
+
+
+def clean_number_of_guests(self):
+    guests = self.cleaned_data['number_of_guests']
+    if guests < 1 or guests > 10:
+        raise forms.ValidationError("Guests must be between 1 and 10.")
+    return guests
