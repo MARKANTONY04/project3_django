@@ -80,3 +80,5 @@ def create_reservation(request):
         form = ReservationForm()
 
     return render(request, "create_reservation.html", {"form": form})
+
+

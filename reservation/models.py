@@ -1,20 +1,3 @@
-# from django.db import models
-
-# Create your models here.
-
-# class Reservation(models.Model):
-#     name = models.CharField(max_length=50)
-#     phone_number = models.IntegerField()
-#     email = models.EmailField()
-#     date = models.DateField()
-#     time = models.TimeField()
-#     number_of_guests = models.PositiveIntegerField()
-
-#     def __str__(self):
-#         return f"Booking confirmed. Reservation for {self.name} on {self.date} at {self.time}. We look forward to seeing you."
-
-# chat gpt helped with this new version of reservation/models.py
-
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -31,6 +14,7 @@ class Reservation(models.Model):
 
     TABLE_SIZES = [2, 4, 6, 8, 10]
 
+    # chat gpt helped create this function
     def table_group(self):
         """
         Returns capacity group based on number of guests.
