@@ -14,6 +14,8 @@ from .utils import is_table_available, SLOT_STARTS
 @login_required
 def create_reservation(request):
     if request.method == "POST":
+
+
         form = ReservationForm(request.POST)
 
         if form.is_valid():
@@ -41,7 +43,7 @@ def create_reservation(request):
                 pass
 
             messages.success(request, "Reservation created successfully.")
-            return redirect("reservation:reservation_list")
+            return redirect("reservation:reservation_success", pk=reservation.pk)
     else:
         form = ReservationForm()
 
@@ -135,3 +137,9 @@ def check_availability(request):
     available = is_table_available(date_obj, time_obj, guests)
     msg = "Available" if available else "Fully booked"
     return JsonResponse({"available": available, "message": msg})
+
+
+@login_required
+def reservation_success(request, pk):
+    reservation = get_object_or_404(Reservation, pk=pk, user=request.user)
+    return render(request, "reservation/success.html", {"reservation": reservation})

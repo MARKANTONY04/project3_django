@@ -9,7 +9,13 @@
 
 <form method="POST" id="reservationForm">
     {% csrf_token %}
-    {{ form.non_field_errors }}
+
+    {% if form.errors %}
+    <div class="alert alert-danger">
+        {{ form.errors }}
+    </div>
+    {% endif %}
+
     <div class="mb-3">
         {{ form.name.label_tag }}<br>
         {{ form.name }}
@@ -35,12 +41,9 @@
     </div>
 
     <div class="mb-3">
-        <label for="id_time">Reservation Time</label><br>
-        <select name="time" id="id_time" class="form-control">
-            {% for t in time_slots %}
-                <option value="{{ t }}">{{ t|time:"H:i" }}</option>
-            {% endfor %}
-        </select>
+        {{ form.time.label_tag }}<br>
+        {{ form.time }}
+        {{ form.time.errors }}
     </div>
 
     <div class="mb-3">
@@ -79,9 +82,14 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     }
 
-    document.querySelector("input[name='date']").addEventListener("change", checkAvailability);
-    document.querySelector("select[name='time']").addEventListener("change", checkAvailability);
-    document.querySelector("input[name='number_of_guests']").addEventListener("input", checkAvailability);
+    const dateEl = document.querySelector("input[name='date']");
+    const timeEl = document.querySelector("select[name='time']");
+    const guestsEl = document.querySelector("input[name='number_of_guests']");
+
+    if (dateEl) dateEl.addEventListener("change", checkAvailability);
+    if (timeEl) timeEl.addEventListener("change", checkAvailability);
+    if (guestsEl) guestsEl.addEventListener("input", checkAvailability);
 });
 </script>
 {% endblock %}
+
