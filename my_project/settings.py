@@ -50,10 +50,18 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cloudinary',
+
+    #project apps
     'menu',
     'reservation',
     'home',
     'review',
+
+    # allauth
+     'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 
 ]
 
@@ -156,6 +164,8 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
 
+SITE_ID = 1
+
 # cloudinary.config( 
 #   cloud_name = os.environ.get('CLOUDINARY_CLOUD_NAME'), 
 #   api_key = os.environ.get('CLOUDINARY_API_KEY'), 
@@ -169,6 +179,18 @@ CLOUDINARY_STORAGE = {
 # email setup for users
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'noreply@barneysbistro.test'
+
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+]
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "none"  
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 
 
 
