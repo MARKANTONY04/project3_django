@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.http import JsonResponse, HttpResponseForbidden
 from django.urls import reverse
 
+
 from .models import Reservation
 from .forms import ReservationForm
 from .utils import is_table_available, SLOT_STARTS

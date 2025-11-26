@@ -63,6 +63,10 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
 
+    # crispy forms
+    "crispy_forms",
+    "crispy_bootstrap5",
+
 ]
 
 MIDDLEWARE = [
@@ -81,7 +85,7 @@ ROOT_URLCONF = 'my_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -187,12 +191,18 @@ AUTHENTICATION_BACKENDS = [
 
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "none"  
-ACCOUNT_AUTHENTICATION_METHOD = "username_email"
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+ACCOUNT_USERNAME_REQUIRED = False
+LOGIN_REDIRECT_URL = "reservation:reservation_list"
+LOGOUT_REDIRECT_URL = "account_login"
+ACCOUNT_LOGOUT_REDIRECT_URL = "account_login"
 
 
 
+
+# crispy forms
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
