@@ -2,74 +2,87 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 
+{% block title %}Edit Reservation{% endblock %}
+
 {% block content %}
-<div class="container mt-4">
+<div class="container mt-4 mb-5">
+    <div class="card shadow-lg p-4 mx-auto" style="max-width: 650px;">
+        <h2 class="text-center mb-4">Edit Reservation</h2>
 
-    <h2 class="mb-4 text-center">Edit Reservation</h2>
+        <form method="POST" id="editReservationForm">
+            {% csrf_token %}
 
-    <!-- Show Django messages -->
-    {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-                {{ message }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+
+            {% if form.non_field_errors %}
+            <div class="alert alert-danger">
+                {% for error in form.non_field_errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
             </div>
-        {% endfor %}
-    {% endif %}
+            {% endif %}
 
-    <form method="POST" class="card p-4 shadow-sm">
-        {% csrf_token %}
+            {{ form|crispy }}
 
-        <!-- Name -->
-        <div class="mb-3">
-            {{ form.name.label_tag }}
-            {{ form.name }}
-            {{ form.name.errors }}
-        </div>
+            <div class="mb-3">
+                <label for="time" class="form-label">Time</label>
+                <select name="time" id="time" class="form-select" required>
+                    <option value="">Select a time</option>
+                    {% for slot in time_slots %}
+                        {% if slot|stringformat:"H:i" == reservation.time|stringformat:"H:i" %}
+                        <option value="{{ slot|time:'H:i' }}" selected>
+                        {% else %}
+                        <option value="{{ slot|time:'H:i' }}">
+                        {% endif %}
+                            {{ slot|time:"g a" }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
 
-        <!-- Phone -->
-        <div class="mb-3">
-            {{ form.phone_number.label_tag }}
-            {{ form.phone_number }}
-            {{ form.phone_number.errors }}
-        </div>
+            <p id="availability-msg" class="fw-semibold"></p>
 
-        <!-- Email -->
-        <div class="mb-3">
-            {{ form.email.label_tag }}
-            {{ form.email }}
-            {{ form.email.errors }}
-        </div>
-
-        <!-- Date -->
-        <div class="mb-3">
-            {{ form.date.label_tag }}
-            {{ form.date }}
-            {{ form.date.errors }}
-        </div>
-
-        <div class="mb-3">
-            {{ form.time.label_tag }}
-            {{ form.time }}
-            {{ form.time.errors }}
-        </div>
-
-        
-
-        <!-- Guests -->
-        <div class="mb-3">
-            {{ form.number_of_guests.label_tag }}
-            {{ form.number_of_guests }}
-            {{ form.number_of_guests.errors }}
-        </div>
-
-        <div class="d-flex justify-content-between mt-4">
-            <button type="submit" class="btn btn-success px-4">Save Changes</button>
-            <a href="{% url 'reservation:reservation_list' %}" class="btn btn-secondary px-4">Cancel</a>
-        </div>
-
-    </form>
-
+            <button type="submit" class="btn btn-success w-100 mt-3">Save Changes</button>
+            <a href="{% url 'reservation:reservation_list' %}" class="btn btn-secondary w-100 mt-2">Cancel</a>
+        </form>
+    </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    function checkAvailability() {
+        const date = document.querySelector("input[name='date']").value;
+        const time = document.querySelector("select[name='time']").value;
+        const guests = document.querySelector("input[name='number_of_guests']").value;
+
+        if (!date || !time || !guests) {
+            document.getElementById("availability-msg").innerHTML = "";
+            return;
+        }
+
+        fetch("{% url 'reservation:check_availability' %}?date=" + encodeURIComponent(date) + "&time=" + encodeURIComponent(time) + "&guests=" + encodeURIComponent(guests))
+            .then(r => r.json())
+            .then(data => {
+                const msg = document.getElementById("availability-msg");
+                msg.classList.add("mt-2");
+
+                if (data.available) {
+                    msg.innerHTML = "<span class='text-success'>Available ✔</span>";
+                } else {
+                    msg.innerHTML = "<span class='text-danger'>Fully booked ✖</span>";
+                }
+            });
+    }
+
+    document.querySelector("input[name='date']").addEventListener("change", checkAvailability);
+    document.querySelector("select[name='time']").addEventListener("change", checkAvailability);
+    document.querySelector("input[name='number_of_guests']").addEventListener("input", checkAvailability);
+});
+</script>
 {% endblock %}
+
 

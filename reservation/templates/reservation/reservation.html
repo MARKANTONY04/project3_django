@@ -4,7 +4,6 @@
 {% load crispy_forms_tags %}
 
 {% block title %}Make a Reservation{% endblock %}
-
 {% block content %}
 <div class="container mt-4 mb-5">
     <div class="card shadow-lg p-4 mx-auto" style="max-width: 650px;">
@@ -12,18 +11,33 @@
 
         <form method="POST" id="reservationForm">
             {% csrf_token %}
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+
+            {% if form.non_field_errors %}
+            <div class="alert alert-danger">
+                {% for error in form.non_field_errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+
             {{ form|crispy }}
 
             <div class="mb-3">
-            <label for="time" class="form-label">Time</label>
-            <select name="time" id="time" class="form-select" required>
-                <option value="">Select a time</option>
-                {% for slot in time_slots %}
-                    <option value="{{ slot|time:'H:i' }}">
-                        {{ slot|time:"g a" }}
-                    </option>
-                {% endfor %}
-            </select>
+                <label for="time" class="form-label">Time</label>
+                <select name="time" id="time" class="form-select" required>
+                    <option value="">Select a time</option>
+                    {% for slot in time_slots %}
+                        <option value="{{ slot|time:'H:i' }}">
+                            {{ slot|time:"g a" }}
+                        </option>
+                    {% endfor %}
+                </select>
             </div>
 
             <p id="availability-msg" class="fw-semibold"></p>
@@ -64,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("input[name='number_of_guests']").addEventListener("input", checkAvailability);
 });
 </script>
-
 {% endblock %}
+
 
 
