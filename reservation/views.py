@@ -16,48 +16,32 @@ def create_reservation(request):
         if form.is_valid():
             reservation = form.save(commit=False)
             reservation.user = request.user
-
-            # Convert time from POST dropdown
-            slot_str = request.POST.get("time")
-            reservation.time = datetime.strptime(slot_str, "%H:%M").time()
-
-            # Availability check
-            if not is_table_available(reservation.date, reservation.time, reservation.number_of_guests):
-                messages.error(request, "No tables available for this slot. Please choose another time or date.")
-                return render(request, "reservation/reservation.html", {"form": form, "time_slots": SLOT_STARTS})
-
             reservation.save()
             messages.success(request, "Reservation created successfully.")
             return redirect("reservation:reservation_success", pk=reservation.pk)
-
+        # if form invalid, it will re-render and display form.non_field_errors
     else:
         form = ReservationForm()
+
     return render(request, "reservation/reservation.html", {"form": form, "time_slots": SLOT_STARTS})
 
 
 @login_required
 def edit_reservation(request, pk):
     reservation = get_object_or_404(Reservation, pk=pk, user=request.user)
+
     if request.method == "POST":
         form = EditReservationForm(request.POST, instance=reservation)
         if form.is_valid():
-            updated = form.save(commit=False)
-
-            slot_str = form.cleaned_data["time"]
-            updated.time = datetime.strptime(slot_str, "%H:%M").time()
-
-            # Availability check excluding current reservation
-            if not is_table_available(updated.date, updated.time, updated.number_of_guests, exclude_id=reservation.pk):
-                messages.error(request, "No tables available for this updated time.")
-                return render(request, "reservation/edit_reservation.html", {"form": form, "reservation": reservation})
-
-            updated.save()
+            form.save()
             messages.success(request, "Reservation updated successfully.")
             return redirect("reservation:reservation_list")
     else:
-        form = EditReservationForm(instance=reservation, initial={"time": reservation.time.strftime("%H:%M")})
+        # prepare initial time selection as HH:MM string so the ChoiceField preselects it
+        initial = {"time": reservation.time.strftime("%H:%M")}
+        form = EditReservationForm(instance=reservation, initial=initial)
 
-    return render(request, "reservation/edit_reservation.html", {"form": form, "reservation": reservation})
+    return render(request, "reservation/edit_reservation.html", {"form": form, "reservation": reservation, "time_slots": SLOT_STARTS})
 
 
 @login_required

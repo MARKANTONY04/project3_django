@@ -28,18 +28,6 @@
 
             {{ form|crispy }}
 
-            <div class="mb-3">
-                <label for="time" class="form-label">Time</label>
-                <select name="time" id="time" class="form-select" required>
-                    <option value="">Select a time</option>
-                    {% for slot in time_slots %}
-                        <option value="{{ slot|time:'H:i' }}">
-                            {{ slot|time:"g a" }}
-                        </option>
-                    {% endfor %}
-                </select>
-            </div>
-
             <p id="availability-msg" class="fw-semibold"></p>
 
             <button type="submit" class="btn btn-info w-100 mt-3">Submit Reservation</button>
@@ -73,12 +61,14 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     }
 
-    document.querySelector("input[name='date']").addEventListener("change", checkAvailability);
-    document.querySelector("select[name='time']").addEventListener("change", checkAvailability);
-    document.querySelector("input[name='number_of_guests']").addEventListener("input", checkAvailability);
+    // guard: fields may not exist when JS runs
+    const dateEl = document.querySelector("input[name='date']");
+    const timeEl = document.querySelector("select[name='time']");
+    const guestsEl = document.querySelector("input[name='number_of_guests']");
+
+    if (dateEl) dateEl.addEventListener("change", checkAvailability);
+    if (timeEl) timeEl.addEventListener("change", checkAvailability);
+    if (guestsEl) guestsEl.addEventListener("input", checkAvailability);
 });
 </script>
 {% endblock %}
-
-
-

@@ -3,13 +3,12 @@
 {% load crispy_forms_tags %}
 
 {% block title %}Edit Reservation{% endblock %}
-
 {% block content %}
 <div class="container mt-4 mb-5">
     <div class="card shadow-lg p-4 mx-auto" style="max-width: 650px;">
         <h2 class="text-center mb-4">Edit Reservation</h2>
 
-        <form method="POST" id="editReservationForm">
+        <form method="post">
             {% csrf_token %}
 
             {% if messages %}
@@ -27,22 +26,6 @@
             {% endif %}
 
             {{ form|crispy }}
-
-            <div class="mb-3">
-                <label for="time" class="form-label">Time</label>
-                <select name="time" id="time" class="form-select" required>
-                    <option value="">Select a time</option>
-                    {% for slot in time_slots %}
-                        {% if slot|stringformat:"H:i" == reservation.time|stringformat:"H:i" %}
-                        <option value="{{ slot|time:'H:i' }}" selected>
-                        {% else %}
-                        <option value="{{ slot|time:'H:i' }}">
-                        {% endif %}
-                            {{ slot|time:"g a" }}
-                        </option>
-                    {% endfor %}
-                </select>
-            </div>
 
             <p id="availability-msg" class="fw-semibold"></p>
 
@@ -78,11 +61,16 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     }
 
-    document.querySelector("input[name='date']").addEventListener("change", checkAvailability);
-    document.querySelector("select[name='time']").addEventListener("change", checkAvailability);
-    document.querySelector("input[name='number_of_guests']").addEventListener("input", checkAvailability);
+    const dateEl = document.querySelector("input[name='date']");
+    const timeEl = document.querySelector("select[name='time']");
+    const guestsEl = document.querySelector("input[name='number_of_guests']");
+
+    if (dateEl) dateEl.addEventListener("change", checkAvailability);
+    if (timeEl) timeEl.addEventListener("change", checkAvailability);
+    if (guestsEl) guestsEl.addEventListener("input", checkAvailability);
 });
 </script>
 {% endblock %}
+
 
 
