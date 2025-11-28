@@ -1,95 +1,70 @@
 <!-- recreated from old template with help from chat gpt -->
 
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
 
-{% block title %}Reservation Page{% endblock %}
+{% block title %}Make a Reservation{% endblock %}
 
 {% block content %}
-<h2 class="text-center">Make a Reservation</h2>
+<div class="container mt-4 mb-5">
+    <div class="card shadow-lg p-4 mx-auto" style="max-width: 650px;">
+        <h2 class="text-center mb-4">Make a Reservation</h2>
 
-<form method="POST" id="reservationForm">
-    {% csrf_token %}
+        <form method="POST" id="reservationForm">
+            {% csrf_token %}
+            {{ form|crispy }}
 
-    {% if form.errors %}
-    <div class="alert alert-danger">
-        {{ form.errors }}
+            <div class="mb-3">
+            <label for="time" class="form-label">Time</label>
+            <select name="time" id="time" class="form-select" required>
+                <option value="">Select a time</option>
+                {% for slot in time_slots %}
+                    <option value="{{ slot|time:'H:i' }}">
+                        {{ slot|time:"g a" }}
+                    </option>
+                {% endfor %}
+            </select>
+            </div>
+
+            <p id="availability-msg" class="fw-semibold"></p>
+
+            <button type="submit" class="btn btn-info w-100 mt-3">Submit Reservation</button>
+        </form>
     </div>
-    {% endif %}
-
-    <div class="mb-3">
-        {{ form.name.label_tag }}<br>
-        {{ form.name }}
-        {{ form.name.errors }}
-    </div>
-
-    <div class="mb-3">
-        {{ form.phone_number.label_tag }}<br>
-        {{ form.phone_number }}
-        {{ form.phone_number.errors }}
-    </div>
-
-    <div class="mb-3">
-        {{ form.email.label_tag }}<br>
-        {{ form.email }}
-        {{ form.email.errors }}
-    </div>
-
-    <div class="mb-3">
-        {{ form.date.label_tag }}<br>
-        {{ form.date }}
-        {{ form.date.errors }}
-    </div>
-
-    <div class="mb-3">
-        {{ form.time.label_tag }}<br>
-        {{ form.time }}
-        {{ form.time.errors }}
-    </div>
-
-    <div class="mb-3">
-        {{ form.number_of_guests.label_tag }}<br>
-        {{ form.number_of_guests }}
-        {{ form.number_of_guests.errors }}
-    </div>
-
-    <p id="availability-msg" class="mt-2"></p>
-
-    <button type="submit" class="btn btn-info col-6 m-4">Submit Reservation</button>
-    <a href="{% url 'menu:menu_list' %}" class="btn btn-warning col-6 m-4">View Menu</a>
-</form>
+</div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     function checkAvailability() {
-        const dateInput = document.querySelector("input[name='date']").value;
-        const timeSelect = document.querySelector("select[name='time']").value;
+        const date = document.querySelector("input[name='date']").value;
+        const time = document.querySelector("select[name='time']").value;
         const guests = document.querySelector("input[name='number_of_guests']").value;
 
-        if (!dateInput || !timeSelect || !guests) {
+        if (!date || !time || !guests) {
             document.getElementById("availability-msg").innerHTML = "";
             return;
         }
 
-        fetch("{% url 'reservation:check_availability' %}?date=" + encodeURIComponent(dateInput) + "&time=" + encodeURIComponent(timeSelect) + "&guests=" + encodeURIComponent(guests))
+        fetch("{% url 'reservation:check_availability' %}?date=" + encodeURIComponent(date) + "&time=" + encodeURIComponent(time) + "&guests=" + encodeURIComponent(guests))
             .then(r => r.json())
             .then(data => {
-                const m = document.getElementById("availability-msg");
+                const msg = document.getElementById("availability-msg");
+                msg.classList.add("mt-2");
+
                 if (data.available) {
-                    m.innerHTML = "<span style='color:green;'>Available ✔</span>";
+                    msg.innerHTML = "<span class='text-success'>Available ✔</span>";
                 } else {
-                    m.innerHTML = "<span style='color:red;'>Fully booked ✖</span>";
+                    msg.innerHTML = "<span class='text-danger'>Fully booked ✖</span>";
                 }
             });
     }
 
-    const dateEl = document.querySelector("input[name='date']");
-    const timeEl = document.querySelector("select[name='time']");
-    const guestsEl = document.querySelector("input[name='number_of_guests']");
-
-    if (dateEl) dateEl.addEventListener("change", checkAvailability);
-    if (timeEl) timeEl.addEventListener("change", checkAvailability);
-    if (guestsEl) guestsEl.addEventListener("input", checkAvailability);
+    document.querySelector("input[name='date']").addEventListener("change", checkAvailability);
+    document.querySelector("select[name='time']").addEventListener("change", checkAvailability);
+    document.querySelector("input[name='number_of_guests']").addEventListener("input", checkAvailability);
 });
 </script>
+
 {% endblock %}
+
 
