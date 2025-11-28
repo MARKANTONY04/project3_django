@@ -1,13 +1,13 @@
+
+
 from django import forms
 from .models import Reservation
 from .utils import SLOT_STARTS
-
 from django.core.exceptions import ValidationError
 from datetime import date
 
 
 class ReservationForm(forms.ModelForm):
-
     class Meta:
         model = Reservation
         # remove "time" because we supply our own dropdown in the template
@@ -16,7 +16,12 @@ class ReservationForm(forms.ModelForm):
         widgets = {
             "date": forms.DateInput(attrs={"type": "date", "class": "form-control"}),
             "name": forms.TextInput(attrs={"class": "form-control"}),
-            "phone_number": forms.TextInput(attrs={"class": "form-control"}),
+            "phone_number": forms.TextInput(attrs={
+                "class": "form-control",
+                "pattern": "[0-9]+",
+                "inputmode": "numeric",
+                "placeholder": "Digits only"
+            }),
             "email": forms.EmailInput(attrs={"class": "form-control"}),
             "number_of_guests": forms.NumberInput(attrs={"class": "form-control", "min": 1}),
         }
@@ -27,7 +32,6 @@ class ReservationForm(forms.ModelForm):
             raise ValidationError("You cannot make a reservation in the past.")
         return chosen_date
 
-
     def clean_number_of_guests(self):
         guests = self.cleaned_data.get('number_of_guests')
         if guests is None:
@@ -36,10 +40,12 @@ class ReservationForm(forms.ModelForm):
             raise forms.ValidationError("Guests must be between 1 and 10.")
         return guests
 
+    def clean_phone_number(self):
+        phone = self.cleaned_data.get("phone_number")
+        if not phone.isdigit():
+            raise ValidationError("Phone number must contain only digits.")
+        return phone
 
-# here edit reservation form time
-
-# forms.py
 
 class EditReservationForm(forms.ModelForm):
     class Meta:
@@ -49,7 +55,12 @@ class EditReservationForm(forms.ModelForm):
             "date": forms.DateInput(attrs={"type": "date", "class": "form-control"}),
             "time": forms.Select(attrs={"class": "form-control"}, choices=[(t, t.strftime("%H:%M")) for t in SLOT_STARTS]),
             "name": forms.TextInput(attrs={"class": "form-control"}),
-            "phone_number": forms.TextInput(attrs={"class": "form-control"}),
+            "phone_number": forms.TextInput(attrs={
+                "class": "form-control",
+                "pattern": "[0-9]+",
+                "inputmode": "numeric",
+                "placeholder": "Digits only"
+            }),
             "email": forms.EmailInput(attrs={"class": "form-control"}),
             "number_of_guests": forms.NumberInput(attrs={"class": "form-control", "min": 1}),
         }
@@ -68,4 +79,8 @@ class EditReservationForm(forms.ModelForm):
             raise forms.ValidationError("Guests must be between 1 and 10.")
         return guests
 
-
+    def clean_phone_number(self):
+        phone = self.cleaned_data.get("phone_number")
+        if not phone.isdigit():
+            raise ValidationError("Phone number must contain only digits.")
+        return phone
