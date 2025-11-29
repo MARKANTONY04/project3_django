@@ -369,7 +369,7 @@ This section will document the testing the website will undergo to ensure everyt
 | No reviews are posted | No reviews screen shows| Pass|
 | Review is posted | Review shows on the page| Pass|
 | Deploy in Heroku | Successful deployment shows everything working as it should like local environment| Pass|
-| CRUD Reservation features work | Users can edit, view, and delete reservations| Pass|
+| CRUD Reservation features work | Users can edit, view, and delete reservations, and will display an error message if fully booked| Pass|
 
 
 No reviews page seen here:
