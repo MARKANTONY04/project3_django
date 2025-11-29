@@ -9,6 +9,7 @@ from .models import Reservation
 from .forms import ReservationForm, EditReservationForm
 from .utils import is_table_available, SLOT_STARTS
 
+# create reservation and edit reservation views helped created by chat gpt
 @login_required
 def create_reservation(request):
     if request.method == "POST":

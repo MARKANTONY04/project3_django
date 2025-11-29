@@ -8,6 +8,8 @@ SLOT_STARTS = [dtime(12,0), dtime(14,0), dtime(16,0), dtime(18,0), dtime(20,0)]
 SLOT_DURATION = timedelta(hours=2)
 MAX_TABLES_PER_GROUP = 3
 
+# both functions below helped created with chat gpt
+
 def overlap(start1, end1, start2, end2):
     """Return True if time windows [start1,end1) and [start2,end2) overlap."""
     return start1 < end2 and start2 < end1
