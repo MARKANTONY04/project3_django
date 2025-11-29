@@ -4,7 +4,7 @@ The purpose of this project was to create a fictitious restaurant website to dem
 
 Superuser credentials (case sensitive):
 
-Username = MARKANTONY07
+Username = MARKANTONY07 (x9qjikqj@students.codeinstitute.net)
 
 Password = MillieandCharlie04*
 
@@ -109,7 +109,7 @@ As a social diner, I want to be able to book a different amount of people per or
 
 5. Booking Confirmation
 
-As a user who lives far away, I want to be able to make a booking for the restaurant,  and see the confirmation of my booking order on the site after I’ve made the booking for reassurance of my booking.
+As a user who lives far away, I want to be able to make a booking for the restaurant,  and see the confirmation of my booking order on the site after I’ve made the booking for reassurance of my booking. And amend my order if needed.
 
 6. Restaurant Reviews
 
@@ -155,11 +155,11 @@ At the conclusion of this project, this website is fully functioning and has all
 
 This website is fully responsive, and designed to look good regardless of what screen size is being used. A 'mobile-first' approach was used when designing this website as this is the most popular device size that is currently used when surfing the internet and browsing websites, and screen size was upscaled from there and designed in a way that would make it look good on larger screens with the use of bootstrap’s column function. The site looks good on any device, with content shifting to appropriate locations on the screen as the screen size changes, providing a great user experience.
 
-This website is easy to navigate, as it is constructed in a way that users would expect. There is a navbar at the top with working links to each of the pages users may wish to visit, reinforcing a sense of familiarity and adding an expected page structure that users expect, making it familiar and easy to navigate. The main content in the page is arranged in a way that makes sense and allows easy manoeuvring. Buttons have also been placed on all pages, prompting users to move throughout the website and complete their reservation to dine in this establishment. Pictures and descriptions are provided for menu items, encouraging users to dine in this establishment as the see the food and how it’s prepared.
+This website is easy to navigate, as it is constructed in a way that users would expect. There is a navbar at the top with working links to each of the pages users may wish to visit, reinforcing a sense of familiarity and adding an expected page structure that users expect, making it familiar and easy to navigate. The main content in the page is arranged in a way that makes sense and allows easy manoeuvring. Buttons have also been placed on all pages, prompting users to move throughout the website and complete their reservation to dine in this establishment. Pictures and descriptions are provided for menu items using cloudinary, encouraging users to dine in this establishment as the see the food and how it’s prepared.
 
 The title of the restaurant is in the navbar that displays the business' name, sat in a warm, cozy and comfortable brown emphasising the welcoming nature of the page, and it is located at the top of the page regardless of screen size for all users to see. Furthermore, there is a welcome message on the home page to greet the user as they enter the site, explaining the purpose of the site and how it can be used to benefit them and meet any potential user needs.
 
-This restaurant website is user friendly, allowing users read the home page to get a sense of the website’s purpose, naturally taking them to the menu to gain an interest in dining at the restaurant as they see the appetising meals with quality pictures and vivid descriptions. This carries them along to the reservation page where users fill in their personal details and details of their booking requests, which will be confirmed by the booking success page, providing them with their booking details. A button then invites them to return home where they can navigate to the review page of the website, allowing users to provide a review of their experience at the diner (Review section coming soon!). 
+This restaurant website is user friendly, allowing users read the home page to get a sense of the website’s purpose, naturally taking them to the menu to gain an interest in dining at the restaurant as they see the appetising meals with quality pictures and vivid descriptions. This carries them along to the reservation page where users fill in their personal details and details of their booking requests, which will be confirmed by the booking success page, providing them with their booking details. A button then invites them to return home where they can navigate to the review page of the website, allowing users to provide a review of their experience at the diner (Review section coming soon!). After successfully completing a reservation, users can visit the reservation page to view details of their reservation, and amend or cancel if needed. Users must first create an account before ordering, with the reservation page being a sign or login page if logged out.
 
 There is a footer on the page that contains the site owner's contact information. It contains an email address, allowing anyone to easily contact the site owner for any requests, and it also contains social media links linking users to the site's social media pages to follow for any future updates to the site.
 
@@ -169,11 +169,11 @@ There is a footer on the page that contains the site owner's contact information
 Due to time constraints, there is a certain 'could-have' priority level features in the user stories section that was unable to be implemented into the project. Though unfortunate, this is not a significant issue as the priority and usefulness of these features was low and the website is still fully functioning and finished without them.
 
 
-As the time is now over to work on this project, I would have liked to implement a review page with user authentication but unfortunately I ran out of time focusing on other areas of the project and had to leave it out as a result. It is a shame as the feature is almost complete as you can see in the reservation app (views.py), this will be something to come back to and finish.
+As the time is now over to work on this project, I would have liked to implement a review page but unfortunately I ran out of time focusing on other areas of the project and had to leave it out as a result. It is a shame as the feature is almost complete as you can see in the reservation app (views.py), this will be something to come back to and finish.
 
 Ideally, this would have been a great addition to the site, enhancing its usability even further. However, the lack of these features do not detract anything from the site as the purpose of this site is to display the Barney's Bistro and allow users to make a booking, therefore it’s purpose overall is fully met.
 
-
+You may notice a env.py file with sensitive data that looks accessible on github. Please be assured this is false and the updated env.py file containing the updated sensitive database, cloudinary etc information has been updated and not pushed to github. This new/updated information is completely hidden to all others, while the env.py file contents are irrelevant.
 
 
 ## 3. Technologies Used
@@ -197,6 +197,10 @@ I would also like to thank Code Institute for teaching me on how to code in Djan
 
 Microsoft copilot also assisted me in fixing some of the bugs that are noted down in the next section. Furthermore the code institute's tutoring service also assisted in solving bugs. Code institute's Django Blog project was a useful walkthrough, inspiring me to come up with my own ideas for this project.
 
+The images used in the menu are stored in cloudinary. I would like to thank cloudinary for storing these images and files to keep the project up and running as the files would lay dormant and stop working properly in vs code/github otherwise.
+
+Chat GPT was also used to fix bugs and help generate/reformat code to new iterations of the project. Comments are noted where chat gpt was used.
+
 
 
 ## 4. Testing
@@ -217,15 +221,21 @@ Early on in the project, I had an issue loading templates for the front end of t
 
 ###### Mobile Responsiveness
 
-I had a problem trying to make the site fully responsive for mobile, as seen below the presentation for the reservation screen was messy, all over the place and not professional. After playing around with different ideas, I decided to add all the content in the block to a div with the ‘text-center’ class to resolve the issue, presenting the reservation form in the centre of the screen for all devices ensuring a professional and tidy look. This was a significant bug, as mobile devices are the most popular device to browse the web. Had not this have been fixed, the unprofessionalism of the messy reservation page would have compromised the business goal of inviting customers to dine in this establishment, as an unprofessional reservation page may have driven away customers.
+I had a problem trying to make the site fully responsive for mobile, as seen below the presentation for the reservation screen was messy, all over the place and not professional. After playing around with different ideas, I decided to add all the content in the block to a div with the ‘text-center’ class to resolve the issue, presenting the reservation form in the centre of the screen for all devices ensuring a professional and tidy look. This was a significant bug, as mobile devices are the most popular device to browse the web. Had not this have been fixed, the unprofessionalism of the messy reservation page would have compromised the business goal of inviting customers to dine in this establishment, as an unprofessional reservation page may have driven away customers. 
 
 ![mobile responsiveness error](README.md-media/image-2.png)
 
  
+ I then later recreated this with django cripsy foms as seen in the project for a more professional look.
 
 ###### Static files terminal warning and Heroku deployment
 
 Every time I would run the server I would receive a static file warning in the terminal. To fix this, I created a static folder and moved the style.css in there. I then deployed to Heroku once the warning disappeared to see if everything was working as intended, which it wasn’t. I then added the code [STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')] to settings.py which resolved the issue and deployment was successful. This was a significant bug as I would not have been able to successfully deploy the project without it.
+
+
+##### Reservation app issues
+
+I had major trouble with the reservation app to work properly. At first, I had major problems with the warnings not displaying for invalid bookings, and 2 timeslots on the edit reservation page. I used chat gpt to discover that i  wasn't hiding the default in django crispy forms properly which caused this issue. After excluding it from the code the issue was fixed and only 1 time field showed. Re writing the edit_reservation view got the error message to show on the form if an invalid booking was made too. The page would not redirect to the success page after a successful booking, amending the redirect in the view fixed this.
 
 
 
@@ -241,7 +251,7 @@ The favicons were originally not loading and the console would display error’s
 
 When creating the home page, I wrote a typo in the views that caused an error when trying to view the page. I had accidentally typed ‘make_reservation’ instead of ‘reservation_view’. I was able to change it once I realised the error.
 
-The ‘max_legnth’ parameter caused an error in the ‘Phone’ field on the reservation form which caused an error, after removing the parameter I was able to fix the error.
+The ‘max_legnth’ parameter caused an error in the ‘Phone’ field on the reservation form which caused an error, after removing the parameter I was able to fix the error. Updating the phone field also fixed an error if a user added a O a server errror would occur. This has now been fixed.
 
 ### Code Testing
 
@@ -251,7 +261,7 @@ Testing is an important part of any project, especially in software development 
 
 All the HTML code passed through the industry recognised W3 Validator (linked below). Thankfully the code was tested and passed through the validator as seen below demonstrating that this project has met the HTML requirements as seen below.
 
-![html validator](README.md-media/imagehtml.png)
+![html validator](README.md-media/imagehtmlpass.png)
 
 https://validator.w3.org/
 
@@ -310,7 +320,7 @@ The Pictures and Descriptions user story has been fully met as each menu item ha
 
  
 
-The people booking user story has been met as on the reservation page there is an option for users to book 1 or more people to dine in this restaurant.
+The people booking user story has been met as on the reservation page there is an option for users to book 1 or more people to dine in this restaurant with CRUD functionality.
 
  
 
@@ -322,11 +332,11 @@ The dietary user story has been fully met as there is a meal in each category th
 
  
 
-The booking confirmation user story has been fully met as once users make a booking they receive a confirmation message that there booking has been registered after making a booking/reservation.
+The booking confirmation user story has been fully met as once users make a booking they receive a confirmation message that there booking has been registered after making a booking/reservation with CRUD features.
 
  
 
-The home page user story has been fully met as there is a home page with information about the bistro, which also directs the user to the other areas of the site. The home page is also the first pgae the users come across meaning they will first understand the purpose of the site and then be able to use the rest of the site effectively after understanding it’s purpose.
+The home page user story has been fully met as there is a home page with information about the bistro, which also directs the user to the other areas of the site. The home page is also the first page the users come across meaning they will first understand the purpose of the site and then be able to use the rest of the site effectively after understanding it’s purpose.
 
  
 
@@ -359,6 +369,7 @@ This section will document the testing the website will undergo to ensure everyt
 | No reviews are posted | No reviews screen shows| Pass|
 | Review is posted | Review shows on the page| Pass|
 | Deploy in Heroku | Successful deployment shows everything working as it should like local environment| Pass|
+| CRUD Reservation features work | Users can edit, view, and delete reservations| Pass|
 
 
 No reviews page seen here:
@@ -447,12 +458,14 @@ This project was deployed early in development as per good software development 
 
 Firstly, I would like to thank my mentor for helping me create this project and bring about the final result. He helped my inception of the project, bringing up useful ideas to consider and implement. 
 
-I would also like to thank the free technologies that I have been able to use for this project, I will once again mention Bootstrap, GitHub, Visual Studio Code Copiliot, Microsoft Copilot and Slack for all of these tools that have helped made coding this project possible. Furthermore, I would also like to thank the code institute tutors who helped resolve my menu template issue, getting all the menu items to display correctly.
+I would also like to thank the free technologies that I have been able to use for this project, I will once again mention Bootstrap, GitHub, Visual Studio Code Copiliot, Microsoft Copilot, Cloudinary, Chat GPT, and Slack for all of these tools that have helped made coding this project possible. Furthermore, I would also like to thank the code institute tutors who helped resolve my menu template issue, getting all the menu items to display correctly.
 
 I would like to thank the creators for the YouTube tutorial video below I used that helped me with ideas to construct my Django menu model.
 
 https://www.youtube.com/watch?v=EI02wQ51GjA&list=PLBTOBXTz1YFZK0moSgoZq93V_AdvrUGSj
 
 I would also like to mention that I used the README.md from my last project with Code institute as a template for this README.md, and the social links in the footer of the website from my last project. Like all good software developers, it's good to reuse code (and other things) when appropriate to do so to save time, allowing me to direct my attention elsewhere.
+
+Chat GPT was helpful in resolving bugs and rewriting code in the reservation section of the project as I was having major issues. This helped tremendously to fix it.
 
 Last, and certainly not least I would like to once again thank Code Institute. I have learned backend end software/web development with Django in a matter of weeks thank to them and would not have been able to create this project without them. Furthermore, the walkthrough projects throughout this module culminating in this project have been particularly useful. I would not be here without the teaching I have received from Code institute, and hope this project shows the skills I have learned, and now have been able to implement.
